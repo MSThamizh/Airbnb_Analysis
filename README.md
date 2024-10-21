@@ -48,6 +48,6 @@ The workflow for this project can be summarized as follows:
 - **Python**: [https://docs.python.org/3/](https://docs.python.org/3/)
 - **MongoDB Documentation**: [https://www.mongodb.com/](https://www.mongodb.com/)
 - **Streamlit Documentation**: [https://docs.streamlit.io/library/api-reference](https://docs.streamlit.io/library/api-reference)
-- **Pandas Dataframe**: [https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)]
+- **Pandas Dataframe**: [https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
 - **Plotly Documentation**: [https://plotly.com/python/](https://plotly.com/python/)
 - **Dataset**: [https://docs.google.com/document/d/1SYlU0Wq4Ay-z_CTU3qviTwZd_eDp0vIB/edit](https://docs.google.com/document/d/1SYlU0Wq4Ay-z_CTU3qviTwZd_eDp0vIB/edit)
