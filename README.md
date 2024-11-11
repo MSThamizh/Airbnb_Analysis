@@ -20,7 +20,7 @@ The workflow for this project can be summarized as follows:
 
 1. **Data Retrieval from MongoDB**: Fetch data from the Airbnb dataset stored in MongoDB Atlas. This includes geospatial data, prices, availability, and more.
 2. **Data Cleaning and Preparation**: Clean the data by addressing missing or incorrect values and converting them into the correct format.
-3. **Geospatial Analysis**: Perform geospatial analysis using libraries like Geopandas and Folium to visualize listings on a map.
+3. **Geospatial Analysis**: Perform geospatial analysis using plotly to visualize listings on a map.
 4. **Price and Availability Analysis**: Analyze pricing and availability patterns using dynamic charts and visualizations.
 5. **Streamlit Web Application**: Build an interactive web app for users to explore data through dynamic filters and maps.
 6. **Power BI Dashboards**: Combine insights into a comprehensive dashboard for presenting key findings.
