@@ -294,53 +294,6 @@ elif selected_tab == 'Location-Based Insights':
 
     # Top 20 Hosts by Review Scores Rating in the selected city
     try:   
-        agg_result_review = col.aggregate(
-            [
-                {
-                    "$match": {
-                        "address.country": country,
-                        "address.market": city,
-                        "room_type": room
-                    }
-                },
-                {
-                    "$project": {
-                        "host.host_name": 1,
-                        "review_scores.review_scores_rating": 1
-                    }
-                },
-                {
-                    "$group": {
-                        "_id": "$host.host_name",
-                        "review_scores_rating": {"$avg": "$review_scores.review_scores_rating"},
-                    }
-                },
-                {
-                    "$sort": {
-                        "price": 1
-                    }
-                },
-                {
-                    "$limit": 20
-                }
-            ]
-        )
-        review_high = []
-        for i in agg_result_review:
-            review_high.append(i)
-        top_hosts_rating_city_review = pd.DataFrame(review_high)
-        top_hosts_rating_city_review = top_hosts_rating_city_review.sort_values('price',ascending=True)
-
-        fig_top_rating_city_review = px.bar(top_hosts_rating_city_review, 
-                                        x='review_scores_rating', 
-                                        y='_id', 
-                                        title=f"Top 10 Hosts by Highest Price in {city}", 
-                                        color='review_scores_rating', 
-                                        color_continuous_scale='Peach',
-                                        labels={'_id':'Host','price':'Price ($)'},
-                                        height=350, width=550)
-        st.plotly_chart(fig_top_rating_city_review)
-    except:
         top_hosts_rating_city = df1.groupby(['Host Name'])[['Review Scores Rating']].mean().reset_index()
         top_hosts_rating_city = top_hosts_rating_city.sort_values('Review Scores Rating', ascending=False).head(20)
 
@@ -352,3 +305,5 @@ elif selected_tab == 'Location-Based Insights':
                                     color_continuous_scale='Peach',
                                     height=500, width=900)
         st.plotly_chart(fig_top_rating_city)
+    except:
+        st.error('Data Not Available')
