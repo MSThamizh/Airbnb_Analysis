@@ -28,7 +28,7 @@ with col2:
     - **MongoDB**: For Data Storage and Complex Queries.
     - **Streamlit**: For Building Interactive Web Applications.
     - **Plotly**: For Generating Dynamic Visualizations.
-    - **Tableau/Power BI**: For Comprehensive Data Dashboards.
+    - **Power BI**: For Comprehensive Data Dashboards.
     ''')
 
 selected_tab = option_menu(menu_title='',options=['Geospatial Visualization', 'Price Analysis', 
